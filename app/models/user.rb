@@ -27,9 +27,13 @@ class User < ActiveRecord::Base
        user = User.new
        user.password = Devise.friendly_token[0,10]
        user.name = auth.info.name
-       user.email = auth.info.email
-       if auth.provider == "twitter" 
-         user.save(:validate => false) 
+       if auth.info.email == nil
+         user.email = Devise.friendly_token[0,10] + '@example.com'
+       else
+         user.email = auth.info.email
+       end
+       if auth.provider == "twitter"
+         user.save(:validate => false)
        else
          user.save
        end

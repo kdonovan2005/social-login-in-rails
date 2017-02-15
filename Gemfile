@@ -5,8 +5,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.3'
-
-# Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
 # Use SCSS for stylesheets
@@ -50,43 +48,16 @@ gem 'omniauth-linkedin-oauth2'
 gem 'omniauth-twitter'
 gem 'rmagick'
 gem 'simple_form'
-gem 'pg'
 gem 'thin'
 
 gem 'eventmachine' # , '>=1.07'
 
 group :development, :test do
   gem 'byebug'
-  #gem 'annotate'
   gem 'better_errors'
-  #gem 'binding_of_caller'
-  #gem 'brakeman', :require => false
-  #gem 'bullet'
-  #gem 'debugger'
-  #gem 'factory_girl_rails' # https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md
-  #gem 'faker' # http://rubydoc.info/github/stympy/faker/master/frames
-  #gem 'flay'
-  #gem 'hirb'
-  #gem 'localtunnel'
-  #gem 'lol_dba'
-  #gem 'mailcatcher'
-  #gem 'meta_request','0.2.1'
-  #gem 'pry'
-  #gem 'pry-doc'
-  #gem 'rack-mini-profiler'
-  #gem 'rack-webconsole'
-  #gem 'railroady'
-  #gem 'rails-footnotes', '>= 3.7.5.rc4'
-  #gem 'rails_best_practices'
-  #gem 'reek'
-  #gem 'request-log-analyzer'
-  #gem 'rspec-rails' # https://github.com/rspec/rspec-rails
-  #gem 'selenium-webdriver'
-  #gem 'traceroute'
-  #gem 'xray-rails'
+  gem 'pry'
   gem 'quiet_assets'
 
-  #gem 'timecop'
 end
 
 group :development, :test do
