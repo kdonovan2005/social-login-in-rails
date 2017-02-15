@@ -5,5 +5,6 @@ class AddEntryTable < ActiveRecord::Migration
       t.string :company
       t.integer :entry_number
       t.integer :vote_count, default: 0
+    end
   end
 end
