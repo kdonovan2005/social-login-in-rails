@@ -5,7 +5,7 @@ class PagesController < ApplicationController
       @user = current_user
     end
 
-    @topexhibits = Exhibit.order(vote_count: :desc).limit(2)
+    @topexhibits = Exhibit.order(vote_count: :desc).limit(3)
 
     respond_to do |format|
       format.html

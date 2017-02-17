@@ -2,7 +2,7 @@ class ExhibitsController < ApplicationController
   autocomplete :exhibit, :entry_number, :extra_data => [:entry_name]
 
   def index
-    @topexhibits = Exhibit.order(vote_count: :desc).limit(2)
+    @topexhibits = Exhibit.order(vote_count: :desc).limit(3)
     @exhibits = Exhibit.all
     @exhibit = Exhibit.search(params[:search])
     if @exhibit == []
