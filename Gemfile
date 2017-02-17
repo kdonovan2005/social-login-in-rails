@@ -52,6 +52,8 @@ gem 'thin'
 
 gem 'eventmachine' # , '>=1.07'
 
+gem 'rails4-autocomplete'
+
 group :development, :test do
   gem 'byebug'
   gem 'better_errors'
@@ -65,6 +67,7 @@ group :development, :test do
   gem 'guard' # https://github.com/guard/guard
   gem 'guard-cucumber'
   gem 'guard-rspec'
+  gem 'prybaby'
 end
 
 

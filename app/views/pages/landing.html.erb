@@ -1,5 +1,48 @@
-<% if user_signed_in? %>
-  Welcome! Please cast your vote.
-<% else %>
-  Please sign in!
-<% end %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+
+    <% if current_user != nil %>
+      <% if current_user.vote == true %>
+
+        <% if flash[:notice] %>
+          <div class="notice"><%= flash[:notice] %></div>
+        <% end %>
+        <br>
+        Please cast your vote:
+
+        <%= form_tag exhibits_path, :method => 'get' do %>
+          <% text_field_tag :search, params[:search] %>
+          <%= select_tag :search, options_for_select(@exhibits.collect {|entry| [entry.entry_name]}) %>
+          <%= submit_tag "Vote" %>
+        <% end %>
+
+
+      <% else %>
+        Thank you for casting your vote! Here are the top contenders: <br>
+
+        <% @exhibits.each do |entry| %>
+          <%= entry.entry_code %> <br>
+          <%= entry.category %> <br>
+          <%= entry.entry_name %> <br>
+          <%= entry.entrant_name %> <br>
+          <%= entry.entrant_company %> <br>
+          <%= entry.vote_count %> <br> <br>
+        <% end %>
+
+      <% end %>
+
+    <% else %>
+
+      Please sign in!
+
+    <% end %>
+
+  </body>
+
+</html>

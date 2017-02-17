@@ -260,6 +260,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    prybaby (0.0.2.2)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
@@ -284,6 +285,8 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
+    rails4-autocomplete (1.1.1)
+      rails (>= 3.0)
     railties (4.2.3)
       actionpack (= 4.2.3)
       activesupport (= 4.2.3)
@@ -415,8 +418,10 @@ DEPENDENCIES
   omniauth-oauth2
   omniauth-twitter
   pry
+  prybaby
   quiet_assets
   rails (~> 4.2.3)
+  rails4-autocomplete
   rmagick
   sass-rails
   sdoc

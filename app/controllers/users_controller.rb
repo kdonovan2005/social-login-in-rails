@@ -13,6 +13,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    # binding.pry
   end
 
   # PATCH/PUT /users/1
@@ -23,6 +24,10 @@ class UsersController < ApplicationController
     else
       render action: 'edit'
     end
+  end
+
+  def destroy
+    @user.destroy
   end
 
 

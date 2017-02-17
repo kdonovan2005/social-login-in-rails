@@ -1,0 +1,33 @@
+<% if current_user.vote == true %>
+  Please confirm your vote for: <br>
+  <% @exhibit.each do |entry| %>
+    <%= entry.entry_code %> <br>
+    <%= entry.category %> <br>
+    <%= entry.entry_name %> <br>
+    <%= entry.entrant_name %> <br>
+    <%= entry.entrant_company %> <br> <br>
+
+    This cannot be undone!
+
+    <%= link_to "Go Back", root_path %> <br>
+
+    <%= form_for entry do |f| %>
+      <%= f.hidden_field :vote_count %>
+      <%= f.submit "Vote" %>
+    <% end %>
+
+  <% end %>
+
+<% elsif current_user.vote == false %>
+
+  Thank you for casting your vote! Here are the top contenders: <br>
+  <% @exhibits.each do |entry| %>
+    <%= entry.entry_code %> <br>
+    <%= entry.category %> <br>
+    <%= entry.entry_name %> <br>
+    <%= entry.entrant_name %> <br>
+    <%= entry.entrant_company %> <br>
+    <%= entry.vote_count %> <br> <br>
+  <% end %>
+
+<% end %>
