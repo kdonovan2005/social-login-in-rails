@@ -11,4 +11,19 @@
  *= require_self
  *= require_tree .
  *= require twitter/bootstrap
+ *= require jquery-ui/datepicker
  */
+
+
+input#search {
+  width: 100%;
+  font-size: 1em;
+  padding: .5em 1.3em;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 2em;
+}
+
+input#search:focus {
+  border-color: #A5CEF5;
+}

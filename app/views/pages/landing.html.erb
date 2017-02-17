@@ -17,8 +17,8 @@
         Please cast your vote:
 
         <%= form_tag exhibits_path, :method => 'get' do %>
-          <% text_field_tag :search, params[:search] %>
-          <%= select_tag :search, options_for_select(@exhibits.collect {|entry| [entry.entry_name]}) %>
+          <%= text_field_tag :search, params[:search] %>
+          <div class="results" id="search-results"></div>
           <%= submit_tag "Vote" %>
         <% end %>
 
@@ -26,7 +26,7 @@
       <% else %>
         Thank you for casting your vote! Here are the top contenders: <br>
 
-        <% @exhibits.each do |entry| %>
+        <% @topexhibits.each do |entry| %>
           <%= entry.entry_code %> <br>
           <%= entry.category %> <br>
           <%= entry.entry_name %> <br>
@@ -42,6 +42,12 @@
       Please sign in!
 
     <% end %>
+
+    <script>
+      $(function() {
+        new app.Exhibits;
+      });
+    </script>
 
   </body>
 

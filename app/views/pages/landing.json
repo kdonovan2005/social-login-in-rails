@@ -1,0 +1,4 @@
+json.array(@exhibits) do |entry|
+  json.entry_code   entry.entry_code
+  json.entry_name   entry.entry_name
+end

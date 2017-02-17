@@ -21,7 +21,7 @@
 <% elsif current_user.vote == false %>
 
   Thank you for casting your vote! Here are the top contenders: <br>
-  <% @exhibits.each do |entry| %>
+  <% @topexhibits.each do |entry| %>
     <%= entry.entry_code %> <br>
     <%= entry.category %> <br>
     <%= entry.entry_name %> <br>

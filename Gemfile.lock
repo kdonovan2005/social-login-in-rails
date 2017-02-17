@@ -254,6 +254,7 @@ GEM
       json (~> 1.3)
       omniauth-oauth (~> 1.1)
     orm_adapter (0.5.0)
+    pg (0.19.0)
     polyamorous (1.2.0)
       activerecord (>= 3.0)
     pry (0.10.1)
@@ -348,7 +349,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    sqlite3 (1.3.10)
     taps (0.3.24)
       rack (>= 1.0.1)
       rest-client (>= 1.4.0, < 1.7.0)
@@ -406,6 +406,7 @@ DEPENDENCIES
   intercom-rails
   jbuilder
   jquery-rails
+  jquery-ui-rails
   json
   koala
   launchy
@@ -417,6 +418,7 @@ DEPENDENCIES
   omniauth-linkedin-oauth2
   omniauth-oauth2
   omniauth-twitter
+  pg
   pry
   prybaby
   quiet_assets
@@ -427,7 +429,6 @@ DEPENDENCIES
   sdoc
   shoulda-matchers
   simple_form
-  sqlite3
   taps
   thin
   turbolinks
