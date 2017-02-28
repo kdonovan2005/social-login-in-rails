@@ -24,6 +24,7 @@ class ExhibitsController < ApplicationController
     else
       current_user.save
     end
+    flash[:notice] = "Thank you for voting for #{@exhibit.entry_name}"
     redirect_to exhibits_path
   end
 

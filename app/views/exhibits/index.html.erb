@@ -20,7 +20,11 @@
 
 <% elsif current_user.vote == false %>
 
-  Thank you for casting your vote! Here are the top contenders: <br>
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% else %>
+    You have already cast a vote. Here are current top contenders!
+  <% end %>
   <% @topexhibits.each do |entry| %>
     <%= entry.entry_code %> <br>
     <%= entry.category %> <br>
