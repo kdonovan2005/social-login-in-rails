@@ -1,5 +1,5 @@
 class ExhibitsController < ApplicationController
-  autocomplete :exhibit, :entry_number, :extra_data => [:entry_name]
+  autocomplete :exhibit, :entry_code
 
   def index
     @topexhibits = Exhibit.order(vote_count: :desc).limit(3)

@@ -17,7 +17,7 @@
         Please cast your vote:
 
         <%= form_tag exhibits_path, :method => 'get' do %>
-          <%= text_field_tag :search, params[:search] %>
+          <%= text_field_tag :search, params[:search], data: { autocomplete: autocomplete_exhibit_entry_code_exhibits_path, update_elements: {} } %>
           <div class="results" id="search-results"></div>
           <%= submit_tag "Vote" %>
         <% end %>
@@ -42,12 +42,6 @@
       Please sign in!
 
     <% end %>
-
-    <script>
-      $(function() {
-        new app.Exhibits;
-      });
-    </script>
 
   </body>
 
