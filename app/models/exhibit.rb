@@ -1,7 +1,8 @@
 class Exhibit < ActiveRecord::Base
 
   def self.search(search)
-    if search != ''
+    if search != '' && search != nil
+      search = search[0,4]
       entry = where("entry_code = '#{search}' ")
       if entry == nil || entry == ''
         "Sorry, we could not find that entry."
@@ -11,6 +12,12 @@ class Exhibit < ActiveRecord::Base
     else
       return false
     end
+  end
+
+  def display_name
+    id = self.id
+    entry = Exhibit.find(id)
+    "#{entry.entry_code} - #{entry.entry_name} from #{entry.entrant_name}"
   end
 
 end
