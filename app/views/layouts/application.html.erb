@@ -17,11 +17,13 @@
       Welcome, <%= current_user.name %>! <br>
       <%= link_to "Logout", destroy_user_session_path %> <br>
     <% else %>
-      <%= link_to "Sign in", new_user_session_path %>
+      2016 Columbus American Advertising Awards
     <% end %>
 
     <%= yield %>
 
+    <p>Disgruntled entrants who didn't win can submit their complaints to Makeway.is</p>
+    <p>This voting app was made by: MAKEWAY</p>
 
   </body>
 
