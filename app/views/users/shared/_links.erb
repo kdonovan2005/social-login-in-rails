@@ -1,5 +1,12 @@
 <%- if devise_mapping.omniauthable? %>
-  <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider) %><br />
-  <% end -%>
-<% end -%>
+  <% resource_class.omniauth_providers.each do |provider| %>
+    <% if provider == :facebook %>
+      <a href="<%= omniauth_authorize_path(resource_name, provider) %>" class="facebook">Sign in with Facebook</a> <br>
+      <!-- link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: 'facebook'-->
+    <% elsif provider == :twitter %>
+      <%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: 'twitter' %> <br>
+    <% elsif provider == :google_oauth2 %>
+      <%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: 'google' %> <br>
+    <% end %>
+  <% end %>
+<% end %>

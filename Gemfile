@@ -59,6 +59,8 @@ gem 'figaro'
 
 gem 'rails_12factor'
 
+gem 'fontello_rails_converter'
+
 group :development, :test do
   gem 'byebug'
   gem 'better_errors'

@@ -4,7 +4,7 @@
   <head>
 
     <title>SociaLoginRails</title>
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "autocomplete-rails.js" %>
     <!-- <script type="text/javascript" src="/public/javascripts/autocomplete-rails.js"></script> -->
@@ -14,17 +14,27 @@
 
   <body>
 
+    <div class="center">
+      <img src="<%= asset_path('AAF logo.svg') %>" alt="AAF Logo" id="aaflogo">
+      <p class="bold">2016 Viewers Choice Award</p>
+    </div>
+    <hr class="black">
+    <hr class="black">
+
     <% if user_signed_in? %>
-      Welcome, <%= current_user.name %>! <br>
-      <%= link_to "Logout", destroy_user_session_path %> <br>
+      <p class="align-left red bold inline">Welcome, <%= current_user.name %>!</p><span class="align-right inline"><%= link_to "Logout", destroy_user_session_path %></span>
     <% else %>
-      2016 Columbus American Advertising Awards
+      <p class="red bold">2016 Columbus American Advertising Awards</p>
     <% end %>
 
     <%= yield %>
 
-    <p>Disgruntled entrants who didn't win can submit their complaints to Makeway.is</p>
-    <p>This voting app was made by: MAKEWAY</p>
+    <h4 class="bold small-pad">Disgruntled entrants who didn't win can submit their complaints to Makeway.is</h4>
+    <div class="center">
+      <h4 class="bold inline">This voting app was made by:</h4>
+      <img src="<%= asset_path('Makeway Logo.svg') %>" alt="Makeway Logo" class="inline" id="makewaylogo">
+    </div>
+
 
   </body>
 

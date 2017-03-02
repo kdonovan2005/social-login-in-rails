@@ -6,37 +6,39 @@
 
   </head>
   <body>
+    <div class="wrapper">
 
-    <% if current_user != nil %>
-      <% if current_user.vote == true %>
+      <% if current_user != nil %>
+        <% if current_user.vote == true %>
 
         <% if flash[:notice] %>
           <div class="notice"><%= flash[:notice] %></div>
         <% end %>
         <br>
-        Please cast your vote:
 
-        <%= form_tag exhibits_path, :method => 'get' do %>
-          <%= text_field_tag :search, params[:search], data: { autocomplete: autocomplete_exhibit_entry_code_exhibits_path, update_elements: {} } %>
+        <%= form_tag exhibits_path do %>
+          <%= text_field_tag :search, params[:search], class: 'circle-input', placeholder: '00', data: { autocomplete: autocomplete_exhibit_entry_code_exhibits_path, update_elements: {} } %>
           <div class="results" id="search-results"></div>
-          <%= submit_tag "Nominate" %>
+          <%= submit_tag "Nominate", class: 'nominate'%>
         <% end %>
 
         <h2>Now, pick a number associated with the work you like best.</h2>
 
 
-      <% else %>
+        <% else %>
 
-        <h2>Dude. Thanks for helping nominate an Ego-maniac!</h2>
+        <h1>Dude. Thanks for helping nominate an Ego-maniac!</h1>
         <p>Now put down your phone and start mingling with others.</p>
 
       <% end %>
 
-    <% else %>
+      <% else %>
 
-      How did you get here? Please <a href="/users/sign_in">SIGN IN</a>
+        How did you get here? Please <a href="/users/sign_in">SIGN IN</a>
 
-    <% end %>
+      <% end %>
+
+    </div>
 
   </body>
 
