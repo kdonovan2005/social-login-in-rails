@@ -57,6 +57,8 @@ gem 'rails4-autocomplete'
 
 gem 'figaro'
 
+gem 'rails_12factor'
+
 group :development, :test do
   gem 'byebug'
   gem 'better_errors'
