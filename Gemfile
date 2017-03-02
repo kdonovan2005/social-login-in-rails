@@ -55,7 +55,7 @@ gem 'eventmachine' # , '>=1.07'
 
 gem 'rails4-autocomplete'
 
-# gem 'figaro'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug'
