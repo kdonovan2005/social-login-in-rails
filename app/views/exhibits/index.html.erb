@@ -7,14 +7,14 @@
     <%= entry.entrant_name %> <br>
     <%= entry.entrant_company %> <br> <br>
 
-    This cannot be undone!
-
-    <%= link_to "Go Back", root_path %> <br>
+    <%= link_to "Go Back", pages_landing_path %> <br>
 
     <%= form_for entry do |f| %>
       <%= f.hidden_field :vote_count %>
-      <%= f.submit "Vote" %>
+      <%= f.submit "Confirm it" %>
     <% end %>
+
+    <p>There's no take backsies.</p>
 
   <% end %>
 
@@ -22,9 +22,10 @@
 
   <% if flash[:notice] %>
     <div class="notice"><%= flash[:notice] %></div>
-  <% else %>
-    You have already cast a vote. Here are current top contenders!
   <% end %>
+
+  <h2>Dude. Thanks for helping nominate an Ego-maniac!</h2>
+  <p>Now put down your phone and start mingling with others.</p>
   <% @topexhibits.each do |entry| %>
     <%= entry.entry_code %> <br>
     <%= entry.category %> <br>
