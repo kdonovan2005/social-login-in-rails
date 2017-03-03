@@ -150,11 +150,19 @@ form {
   font-size: 93px;
 }
 
+.lg {
+  font-size: 80px;
+}
+
 .smaller {
   font-size: 28px;
 }
 
 .facebook, .twitter, .google {
+  color: #fff;
+}
+
+.facebook:focus, .twitter:focus, .google:focus {
   color: #fff;
 }
 
@@ -183,4 +191,31 @@ form {
 span.fa {
   width: 50px;
   border-right: 2px solid rgba(255,255,255, 0.4)
+}
+
+.white {
+  color: #fff;
+}
+
+.dark {
+  background: rgba(0,0,0,0.8);
+  width: 110%;
+  height: 82vh;
+  margin-left: -5%;
+  padding: 5%;
+  position: relative;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.bg-image {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.dn-pg {
+  margin: 30% auto;
 }
