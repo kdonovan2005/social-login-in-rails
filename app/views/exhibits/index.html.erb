@@ -11,8 +11,8 @@
       </div>
 
       <div class="med-margin">
-        <p class="red bold align-left no-margin">Your Selection:</p>
-        <p class="bold align-left no-margin"><%= entry.entrant_name %>'s <%= entry.entry_name %></p>
+        <p class="red bold align-left no-margin normal">Your Selection:</p>
+        <p class="bold align-left no-margin normal"><%= entry.entrant_name %>'s <%= entry.entry_name %></p>
       </div>
 
       <%= form_for entry do |f| %>
@@ -23,7 +23,7 @@
 
       <%= link_to "Go Back", pages_landing_path, class: 'go-back' %> <br>
 
-      <p class="italic align-left">There's no take backsies.</p>
+      <p class="italic align-left normal">There's no take backsies.</p>
 
     <% end %>
 
@@ -33,8 +33,8 @@
       <div class="notice"><%= flash[:notice] %></div>
     <% end %>
 
-    <h1 class="align-left">Dude. Thanks for helping nominate an Ego-maniac!</h1>
-    <p class="align-left italic">Now put down your phone and start mingling with others.</p>
+    <h1 class="align-left xl">Dude. Thanks for helping nominate an Ego-maniac!</h1>
+    <p class="align-left italic normal">Now put down your phone and start mingling with others.</p>
 
   <% end %>
 

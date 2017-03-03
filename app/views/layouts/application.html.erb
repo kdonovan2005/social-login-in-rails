@@ -24,14 +24,14 @@
     <% if user_signed_in? %>
       <p class="align-left red bold inline uppercase smaller">Welcome, <%= current_user.name %>!<span class="align-right inline"><%= link_to "Log out", destroy_user_session_path, class: 'log-out uppercase' %></span></p>
     <% else %>
-      <p class="red bold">2016 Columbus American Advertising Awards</p>
+      <p class="red bold uppercase smaller">2016 Columbus American Advertising Awards</p>
     <% end %>
 
     <%= yield %>
 
-    <h4 class="bold small-pad center">Disgruntled entrants who didn't win can submit their complaints to Makeway.is</h4>
+    <h4 class="bold small-pad center normal">Disgruntled entrants who didn't win can submit their complaints to Makeway.is</h4>
     <div class="center">
-      <h4 class="bold inline">This voting app was made by:</h4>
+      <h4 class="bold inline normal">This voting app was made by:</h4>
       <img src="<%= asset_path('Makeway Logo.svg') %>" alt="Makeway Logo" class="inline" id="makewaylogo">
     </div>
 
