@@ -154,6 +154,26 @@ form {
   font-size: 28px;
 }
 
-.notice {
-  
+.facebook, .twitter, .google {
+  color: #fff;
+  padding: 2%;
+  margin: 2% 0;
+  border-radius: 15px;
+}
+
+.facebook {
+  background: blue;
+}
+
+.twitter {
+  background: lightblue;
+}
+
+.google {
+  background: red;
+}
+
+.social-login {
+  margin: 5% 0;
+  width: 100%;
 }

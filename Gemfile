@@ -59,6 +59,8 @@ gem 'figaro'
 
 gem 'rails_12factor'
 
+gem 'font-awesome-rails'
+
 group :development, :test do
   gem 'byebug'
   gem 'better_errors'
