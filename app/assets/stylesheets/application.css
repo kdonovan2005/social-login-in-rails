@@ -11,6 +11,7 @@
  *= require_self
  *= require_tree .
  *= require jquery-ui/datepicker
+ *= require twitter/bootstrap
  *= require fontello.css
  */
 
@@ -95,7 +96,6 @@ h4 {
 
 .log-out {
   text-decoration: none;
-  font-size: 30px;
   color: red;
   font-weight: bold;
   position: absolute;

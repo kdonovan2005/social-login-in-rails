@@ -17,10 +17,10 @@
         <br>
 
         <%= form_tag exhibits_path, method: 'get' do %>
-          <%= text_field_tag :search, params[:search], type: 'tel', class: 'circle-input', placeholder: '00', data: { autocomplete: autocomplete_exhibit_entry_code_exhibits_path, update_elements: {} } %>
+          <%= text_field_tag :search, params[:search], type: 'tel', class: 'circle-input', placeholder: '00' %>
           <div class="results" id="search-results"></div>
 
-          <p class="red bold align-left">Your Selection:</p>
+          <!-- <p class="red bold align-left">Your Selection:</p> -->
 
           <%= submit_tag "Nominate", class: 'nominate'%>
         <% end %>
@@ -30,8 +30,8 @@
 
         <% else %>
 
-        <h1 class="center">Dude. Thanks for helping nominate an Ego-maniac!</h1>
-        <p class="center">Now put down your phone and start mingling with others.</p>
+        <h1 class="center align-left">Dude. Thanks for helping nominate an Ego-maniac!</h1>
+        <p class="center align-left italic">Now put down your phone and start mingling with others.</p>
 
       <% end %>
 
