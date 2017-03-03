@@ -64,6 +64,11 @@ body {
   right: 6%;
 }
 
+.log-out:focus {
+  color: crimson;
+  text-decoration: none;
+}
+
 .nominate, .confirm {
   font-size: 40px;
   background: crimson;
@@ -73,6 +78,10 @@ body {
   margin: auto;
   padding: 2%;
   border-radius: 15px;
+}
+
+#input {
+  margin: 5% auto 20%;
 }
 
 .go-back {
@@ -104,12 +113,20 @@ form {
 .circle-input {
   border: 25px solid lightgray;
   border-radius: 50%;
-  height: 250px;
-  width: 250px;
+  height: 290px;
+  width: 290px;
   font-weight: bold;
   font-size: 160px;
   text-align: center;
   margin: auto;
+}
+
+.thanks {
+  margin: 3% 0 8%;
+}
+
+.sign-in {
+  margin: 5% 0;
 }
 
 #confirm-page {
@@ -130,7 +147,7 @@ form {
 }
 
 .xl {
-  font-size: 94px;
+  font-size: 93px;
 }
 
 .smaller {

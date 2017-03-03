@@ -17,7 +17,7 @@
         <br>
 
         <%= form_tag exhibits_path, method: 'get' do %>
-          <%= text_field_tag :search, params[:search], type: 'tel', class: 'circle-input', placeholder: '00' %>
+          <%= text_field_tag :search, params[:search], type: 'tel', class: 'circle-input', id: 'input', placeholder: '00' %>
           <div class="results" id="search-results"></div>
 
           <!-- <p class="red bold align-left">Your Selection:</p> -->
@@ -25,12 +25,12 @@
           <%= submit_tag "Nominate", class: 'nominate'%>
         <% end %>
 
-        <h1 class="center">Now, pick a number associated with the work you like best.</h1>
+        <h1 class="center bold align-left xl">Now, pick a number associated with the work you like best.</h1>
 
 
         <% else %>
 
-        <h1 class="center align-left xl">Dude. Thanks for helping nominate an Ego-maniac!</h1>
+        <h1 class="center align-left xl thanks">Dude. Thanks for helping nominate an Ego-maniac!</h1>
         <p class="center align-left italic phone-down normal">Now put down your phone and start mingling with others.</p>
 
       <% end %>
