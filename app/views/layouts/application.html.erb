@@ -22,14 +22,14 @@
     <hr class="black">
 
     <% if user_signed_in? %>
-      <p class="align-left red bold inline">Welcome, <%= current_user.name %>!</p><span class="align-right inline"><%= link_to "Logout", destroy_user_session_path %></span>
+      <p class="align-left red bold inline uppercase">Welcome, <%= current_user.name %>!<span class="align-right inline"><%= link_to "Log out", destroy_user_session_path, class: 'log-out uppercase' %></span></p>
     <% else %>
       <p class="red bold">2016 Columbus American Advertising Awards</p>
     <% end %>
 
     <%= yield %>
 
-    <h4 class="bold small-pad">Disgruntled entrants who didn't win can submit their complaints to Makeway.is</h4>
+    <h4 class="bold small-pad center">Disgruntled entrants who didn't win can submit their complaints to Makeway.is</h4>
     <div class="center">
       <h4 class="bold inline">This voting app was made by:</h4>
       <img src="<%= asset_path('Makeway Logo.svg') %>" alt="Makeway Logo" class="inline" id="makewaylogo">
