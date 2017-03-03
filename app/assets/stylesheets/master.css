@@ -17,11 +17,11 @@ body {
 }
 
 .red {
-  color: red;
+  color: rgb(200,83,64);
 }
 
 .blue {
-  color: blue;
+  color: rgb(64,90,147);
 }
 
 .black {
@@ -58,20 +58,20 @@ body {
 
 .log-out {
   text-decoration: none;
-  color: red;
+  color: rgb(200,83,64);
   font-weight: bold;
   position: absolute;
   right: 6%;
 }
 
 .log-out:focus {
-  color: crimson;
+  color: rgb(200,83,64);
   text-decoration: none;
 }
 
 .nominate, .confirm {
   font-size: 40px;
-  background: crimson;
+  background: rgb(200,83,64);
   color: white;
   font-weight: bold;
   width: 80%;
@@ -156,24 +156,31 @@ form {
 
 .facebook, .twitter, .google {
   color: #fff;
-  padding: 2%;
-  margin: 2% 0;
+}
+
+.bg {
   border-radius: 15px;
+  padding: 2%;
 }
 
-.facebook {
-  background: blue;
+.fb-bg {
+  background: rgb(64,90,147);
 }
 
-.twitter {
-  background: lightblue;
+.twitter-bg {
+  background: rgb(29,161,242);
 }
 
-.google {
-  background: red;
+.google-bg {
+  background: rgb(200,83,64);
 }
 
 .social-login {
   margin: 5% 0;
   width: 100%;
+}
+
+span.fa {
+  width: 50px;
+  border-right: 2px solid rgba(255,255,255, 0.4)
 }
