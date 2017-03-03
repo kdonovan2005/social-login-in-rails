@@ -13,7 +13,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    # binding.pry
   end
 
   # PATCH/PUT /users/1
@@ -38,7 +37,7 @@ class UsersController < ApplicationController
     end
 
     def validate_authorization_for_user
-       redirect_to root_path unless @user == current_user
+      redirect_to pages_landing_path unless @user == current_user
     end
 
     # 2015-07-23 RICHARD: Added to implement strong parameters

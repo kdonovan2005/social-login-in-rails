@@ -6,11 +6,19 @@ SociaLoginRails::Application.routes.draw do
   get "pages/welcome"
   get "pages/landing"
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
-  resources :users
+  authenticated :user do
+    root 'pages#landing', as: :authenticated_root
+  end
+
+  root :to => redirect('/users/sign_in')
 
   resources :exhibits do
     get :autocomplete_exhibit_entry_code, :on => :collection
   end
+
+  # authenticated :user do
+  #   root :to => "pages#landing"
+  # end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -18,7 +26,6 @@ SociaLoginRails::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root :to => 'pages#landing'
-  root :to => redirect('/users/sign_in')
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
