@@ -16,7 +16,7 @@
         <% end %>
         <br>
 
-        <%= form_tag exhibits_path do %>
+        <%= form_tag exhibits_path, method: 'get' do %>
           <%= text_field_tag :search, params[:search], type: 'tel', class: 'circle-input', placeholder: '00', data: { autocomplete: autocomplete_exhibit_entry_code_exhibits_path, update_elements: {} } %>
           <div class="results" id="search-results"></div>
 

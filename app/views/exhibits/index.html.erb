@@ -1,31 +1,41 @@
-<% if current_user.vote == true %>
-  Please confirm your vote for: <br>
-  <% @exhibit.each do |entry| %>
-    <%= entry.entry_code %> <br>
-    <%= entry.category %> <br>
-    <%= entry.entry_name %> <br>
-    <%= entry.entrant_name %> <br>
-    <%= entry.entrant_company %> <br> <br>
+<div class="wrapper center">
+  <br>
+  <br>
 
-    <%= link_to "Go Back", pages_landing_path %> <br>
+  <% if current_user.vote == true %>
 
-    <%= form_for entry do |f| %>
-      <%= f.hidden_field :vote_count %>
-      <%= f.submit "Confirm it" %>
+    <% @exhibit.each do |entry| %>
+
+      <div class="circle-input" id="confirm-page">
+        <span class="center"><%= entry.entry_code %></span>
+      </div>
+
+      <div class="med-margin">
+        <p class="red bold align-left no-margin">Your Selection:</p>
+        <p class="bold align-left no-margin"><%= entry.entrant_name %>'s <%= entry.entry_name %></p>
+      </div>
+
+      <%= form_for entry do |f| %>
+        <%= f.hidden_field :vote_count %>
+        <%= f.submit "Confirm it", class: 'confirm' %>
+      <% end %>
+
+
+      <%= link_to "Go Back", pages_landing_path, class: 'go-back' %> <br>
+
+      <p class="italic align-left">There's no take backsies.</p>
+
     <% end %>
 
-    <p>There's no take backsies.</p>
+    <% elsif current_user.vote == false %>
+
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
+
+    <h1 class="align-left">Dude. Thanks for helping nominate an Ego-maniac!</h1>
+    <p class="align-left italic">Now put down your phone and start mingling with others.</p>
 
   <% end %>
 
-<% elsif current_user.vote == false %>
-
-  <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
-  <% end %>
-
-  <h1>Dude. Thanks for helping nominate an Ego-maniac!</h1>
-  <p>Now put down your phone and start mingling with others.</p>
-
-
-<% end %>
+</div>
