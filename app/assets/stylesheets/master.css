@@ -40,6 +40,10 @@ body {
   padding: 2%;
 }
 
+.top-margin {
+  margin-top: 20%;
+}
+
 .med-margin {
   margin: 5% 0;
 }
@@ -111,7 +115,27 @@ form {
 }
 
 #makewaylogo {
-  width: 25%;
+  width: 100%;
+}
+
+#sorrylogo {
+  width: 35%;
+}
+
+#logolink {
+  align-self: center;
+  line-height: 0;
+}
+
+#madeby {
+  align-self: center;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  align-content: center;
 }
 
 .circle-input {
@@ -202,7 +226,7 @@ span.fa {
 }
 
 .dark {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.7);
   width: 110%;
   height: 82vh;
   margin-left: -5%;
