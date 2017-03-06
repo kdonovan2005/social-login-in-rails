@@ -28,6 +28,10 @@ body {
   border-color: black;
 }
 
+.black-text {
+  color: #000;
+}
+
 .bold {
   font-weight: bold;
 }
