@@ -205,6 +205,10 @@ form {
   font-size: 80px;
 }
 
+.small {
+  font-size: 36px;
+}
+
 .smaller {
   font-size: 28px;
 }
