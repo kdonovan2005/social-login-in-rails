@@ -141,8 +141,8 @@ form {
 .circle-input {
   border: 25px solid lightgray;
   border-radius: 50%;
-  height: 290px;
-  width: 290px;
+  height: 400px;
+  width: 400px;
   font-weight: bold;
   font-size: 160px;
   text-align: center;
