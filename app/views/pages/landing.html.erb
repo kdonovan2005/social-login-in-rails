@@ -33,6 +33,15 @@
         <h1 class="center align-left xl thanks">Dude. Thanks for helping nominate an Ego-maniac!</h1>
         <p class="center align-left italic phone-down normal">Now put down your phone and start mingling with others.</p>
 
+        <h1 class="align-left lg top-entries">Check out the top contenders:</h1>
+        <% @topexhibits.each do |entry| %>
+          <% if entry.vote_count == 1 %>
+            <p class="normal align-left"><span class="italic"><%= entry.entry_name %></span> by <%= entry.entrant_name %></p>
+          <% else %>
+            <p class="normal align-left"><span class="italic"><%= entry.entry_name %></span> by <%= entry.entrant_name %></p>
+          <% end %>
+        <% end %>
+
       <% end %>
 
       <% else %>

@@ -16,6 +16,10 @@ body {
   text-align: left;
 }
 
+.top-entries {
+  margin-top: 15%;
+}
+
 .red {
   color: rgb(200,83,64);
 }
@@ -123,18 +127,25 @@ form {
 }
 
 #logolink {
+  -webkit-align-self: center;
   align-self: center;
   line-height: 0;
 }
 
 #madeby {
+  -webkit-align-self: center;
   align-self: center;
   white-space: nowrap;
   margin: 0;
 }
 
 .flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-content: center;
   align-content: center;
 }
 
@@ -158,14 +169,26 @@ form {
 }
 
 #confirm-page {
+  /*display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  align-content: center;
+  -webkit-align-content: center;
+  align-content: center;*/
   text-align: center;
+  position: relative;
 }
 
 #confirm-page span {
-  align-self: center;
+  /*-webkit-align-self: center;
+  align-self: center;*/
   width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 
 /*Text Sizing*/
