@@ -36,13 +36,23 @@
     <h1 class="align-left xl thanks bold">Dude. Thanks for helping nominate an Ego-maniac!</h1>
     <p class="align-left georgia italic normal">Now put down your phone and start mingling with others.</p>
 
-    <h1 class="align-left lg top-entries">Check out the top contenders:</h1>
+    <h1 class="align-left md top-entries">Check out the top contenders</h1>
+    <hr class="red-line">
     <% @topexhibits.each do |entry| %>
-      <% if entry.vote_count == 1 %>
-        <p class="normal align-left"><span class="italic"><%= entry.entry_name %></span> by <%= entry.entrant_name %></p>
-      <% else %>
-        <p class="normal align-left"><span class="italic"><%= entry.entry_name %></span> by <%= entry.entrant_name %></p>
-      <% end %>
+      <div class="flex sm-margin">
+        <div class="xl bold white outline">
+          <%= entry.vote_count %>
+        </div>
+        <div class="closer">
+          <p class="red normal bold"><%= entry.entry_name %></p>
+
+          <% if entry.entrant_company == "Columbus College of Art & Design" %>
+            <p class="normal bold"><%= entry.entrant_name %></p>
+          <% else %>
+            <p class="normal bold"><%= entry.entrant_company %></p>
+          <% end %>
+        </div>
+      </div>
     <% end %>
 
   <% end %>

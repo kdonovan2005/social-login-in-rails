@@ -20,6 +20,10 @@ body {
   margin-top: 15%;
 }
 
+.sm-margin {
+  margin: 5% 0 0;
+}
+
 .red {
   color: rgb(200,83,64);
 }
@@ -30,6 +34,25 @@ body {
 
 .black {
   border-color: black;
+}
+
+.red-line {
+  border: 6px solid rgb(200,83,64);
+}
+
+.outline {
+  color: #fff;
+  text-shadow: -4px -4px 0 rgb(200,83,64),
+  4px -4px 0 rgb(200,83,64),
+  -4px 4px 0 rgb(200,83,64),
+  4px 4px 0 rgb(200,83,64);
+  margin-right: 8%;
+  line-height: normal;
+}
+
+.closer {
+  line-height: normal;
+  margin: 0;
 }
 
 hr.black {
@@ -207,6 +230,10 @@ form {
 
 .lg {
   font-size: 80px;
+}
+
+.md {
+  font-size: 54px;
 }
 
 .sm {
