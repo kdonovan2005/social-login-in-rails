@@ -1,0 +1,20 @@
+<ol>
+  <% @exhibits.each do |entry| %>
+    <li class="normal bold">
+      <div class="flex sm-margin">
+        <div class="xl bold white outline">
+          <%= entry.vote_count %>
+        </div>
+        <div class="closer">
+          <p class="red normal bold"><%= entry.entry_name %></p>
+
+          <% if entry.entrant_company == "Columbus College of Art & Design" %>
+            <p class="normal bold align-left"><%= entry.entrant_name %></p>
+          <% else %>
+            <p class="normal bold align-left"><%= entry.entrant_company %></p>
+          <% end %>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</ol>

@@ -21,4 +21,8 @@ class PagesController < ApplicationController
     @skip_footer = true
   end
 
+  def all
+    @exhibits = Exhibit.all
+  end
+
 end

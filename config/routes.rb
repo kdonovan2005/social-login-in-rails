@@ -5,6 +5,8 @@ SociaLoginRails::Application.routes.draw do
   get "pages/sorry"
   get "pages/landing"
 
+  get "/all" => "pages#all"
+
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
   authenticated :user do
     root 'pages#landing', as: :authenticated_root

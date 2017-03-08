@@ -2,7 +2,10 @@ class Exhibit < ActiveRecord::Base
 
   def self.search(search)
     if search != '' && search != nil
-      search = search[0,4]
+      search = search[0,2]
+      if search.length == 1
+        search = search.prepend('0')
+      end
       entry = where("entry_code = '#{search}' ")
       if entry == nil || entry == ''
         "Sorry, we could not find that entry."
