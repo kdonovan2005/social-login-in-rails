@@ -29,10 +29,6 @@
 
     <% elsif current_user.vote == false %>
 
-    <% if flash[:notice] %>
-      <div class="notice"><%= flash[:notice] %></div>
-    <% end %>
-
     <h1 class="align-left xl thanks bold">Dude. Thanks for helping nominate an Ego-maniac!</h1>
     <p class="align-left georgia italic normal">Now put down your phone and start mingling with others.</p>
 
@@ -47,9 +43,9 @@
           <p class="red normal bold"><%= entry.entry_name %></p>
 
           <% if entry.entrant_company == "Columbus College of Art & Design" %>
-            <p class="normal bold"><%= entry.entrant_name %></p>
+            <p class="normal bold align-left"><%= entry.entrant_name %></p>
           <% else %>
-            <p class="normal bold"><%= entry.entrant_company %></p>
+            <p class="normal bold align-left"><%= entry.entrant_company %></p>
           <% end %>
         </div>
       </div>

@@ -285,10 +285,10 @@ span.fa {
 
 .dark {
   background: rgba(0,0,0,0.7);
-  width: 110%;
-  height: 82vh;
-  margin-left: -5%;
-  padding: 5%;
+  width: 126%;
+  height: 100vh;
+  margin: -6% 0 0 -13%;
+  padding: 10%;
   position: relative;
 }
 

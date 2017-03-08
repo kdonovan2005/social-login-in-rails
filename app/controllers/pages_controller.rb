@@ -17,6 +17,7 @@ class PagesController < ApplicationController
   end
 
   def sorry
+    @skip_header = true
     @skip_footer = true
   end
 
