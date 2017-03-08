@@ -22,7 +22,7 @@ class PagesController < ApplicationController
   end
 
   def all
-    @exhibits = Exhibit.all
+    @exhibits = Exhibit.order(vote_count: :desc)
   end
 
 end
