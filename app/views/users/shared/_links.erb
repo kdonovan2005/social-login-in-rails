@@ -1,26 +1,11 @@
 <%- if devise_mapping.omniauthable? %>
   <% resource_class.omniauth_providers.each do |provider| %>
     <% if provider == :facebook %>
-    <div class="social-login">
-      <div class="fb-bg bg">
-        <a href="<%= omniauth_authorize_path(resource_name, provider) %>" class="facebook normal"> <span class="fa fa-facebook"></span> Sign in with Facebook</a> <br>
-      </div>
-    </div>
-      <!-- link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: 'facebook'-->
+      <a href="<%= omniauth_authorize_path(resource_name, provider) %>" class="facebook normal fb-bg bg social-login"> <span class="fa fa-facebook"></span> Sign in with Facebook</a> <br>
     <% elsif provider == :twitter %>
-    <div class="social-login">
-      <div class="twitter-bg bg">
-        <a href="<%= omniauth_authorize_path(resource_name, provider) %>" class="twitter normal"> <span class="fa fa-twitter"></span> Sign in with Twitter</a> <br>
-      </div>
-    </div>
-      <!-- link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: 'twitter normal' <br> -->
+      <a href="<%= omniauth_authorize_path(resource_name, provider) %>" class="twitter normal twitter-bg bg social-login"> <span class="fa fa-twitter"></span> Sign in with Twitter</a> <br>
     <% elsif provider == :google_oauth2 %>
-    <div class="social-login">
-      <div class="google-bg bg">
-        <a href="<%= omniauth_authorize_path(resource_name, provider) %>" class="google normal"> <span class="fa fa-google"></span> Sign in with Google</a>
-      </div>
-    </div>
-      <!-- link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: 'google normal' <br> -->
+      <a href="<%= omniauth_authorize_path(resource_name, provider) %>" class="google normal google-bg bg social-login"> <span class="fa fa-google"></span> Sign in with Google</a>
     <% end %>
   <% end %>
 <% end %>

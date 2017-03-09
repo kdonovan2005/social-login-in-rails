@@ -255,6 +255,7 @@ form {
 .bg {
   border-radius: 15px;
   padding: 2%;
+  display: block;
 }
 
 .fb-bg {
@@ -270,7 +271,7 @@ form {
 }
 
 .social-login {
-  margin: 5% 0;
+  margin: 2.5% 0;
   width: 100%;
 }
 

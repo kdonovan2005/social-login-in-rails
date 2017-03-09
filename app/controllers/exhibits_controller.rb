@@ -6,7 +6,7 @@ class ExhibitsController < ApplicationController
       @topexhibits = Exhibit.order(vote_count: :desc).limit(3)
       @exhibits = Exhibit.all
       @exhibit = Exhibit.search(params[:search])
-      if @exhibit == []
+      if @exhibit == [] || @exhibit == false
         flash[:notice] = "Sorry, that is not a valid entry number."
         redirect_to root_path
       end
