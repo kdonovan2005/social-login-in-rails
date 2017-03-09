@@ -9,7 +9,7 @@
     <div class="wrapper">
 
       <% if current_user != nil %>
-        <% if current_user.vote == true %>
+        <% if current_user.vote == true && @vote_open == true %>
 
         <% if flash[:notice] %>
           <div class="notice normal georgia italic"><%= flash[:notice] %></div>

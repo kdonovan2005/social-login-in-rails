@@ -4,6 +4,7 @@ class PagesController < ApplicationController
     if user_signed_in?
       @user = current_user
       @topexhibits = Exhibit.order(vote_count: :desc).limit(3)
+      @vote_open = true
 
       respond_to do |format|
         format.html
